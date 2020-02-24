@@ -58,4 +58,12 @@ do
 	echo luckyest day is $day2 with cash $key2
 	echo unluckyest day is $day1 with cash $key1
 	echo ""
+	   # asking user for continue for next month or quit
+   echo ""
+   read -p "press x to exit the game else press any key to continue: "  opt
+   if [[ $opt == "x" ]]
+   then
+      exit
+   fi
+   echo ""
 done
