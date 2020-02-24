@@ -1,6 +1,8 @@
 #!/bin/bash -x
 
-windays=() #initializing windays array
+while [[ true ]]
+do
+cash=0
 win=0	# initialing win
 loose=0	# initialing loose
 for (( i = 0; i < 20; i++ ))	# to play the game for 20 time ie. 20 days
@@ -30,8 +32,17 @@ do
 	cash[i]=$cash 	# Recording cash tranjection of each day
 done
 
+# Displaying recorded Cash Tranjection
 for (( i=0; i<${#cash[@]}; i++ ))
 do
 	echo this month in day $(( i + 1 )) cash is ${cash[i]}
 done
-#echo ${cash[@]}
+# asking user for continue for next month or quit
+echo ""
+read -p "press x to exot the game else press any key to continue: "	opt
+if [[ $opt == "x" ]]
+then
+	exit
+fi
+echo ""
+done
