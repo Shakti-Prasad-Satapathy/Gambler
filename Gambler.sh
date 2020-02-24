@@ -1,14 +1,11 @@
 #!/bin/bash -x
 
 while [[ true ]]
-<<<<<<< HEAD
 do
 cash=0
 win=0	# initialing win
 loose=0	# initialing loose
 for (( i = 0; i < 20; i++ ))	# to play the game for 20 time ie. 20 days
-=======
->>>>>>> UC5
 do
 	windays=() #initializing windays array
 	win=0	# initialing win
@@ -40,7 +37,6 @@ do
 		cash[i]=$cash 	# Recording cash tranjection of each day
 	done
 
-<<<<<<< HEAD
 # Displaying recorded Cash Tranjection
 for (( i=0; i<${#cash[@]}; i++ ))
 do
@@ -55,18 +51,3 @@ then
 fi
 echo ""
 done
-=======
-	for (( i=0; i<${#cash[@]}; i++ ))
-	do
-		echo this month in day $(( i + 1 )) cash is ${cash[i]}
-	done
-
-	echo ""
-	read -p "press "x" to exit the game: " esc
-	if [[ $esc == "x" ]]
-	then
-		exit
-	fi
-	echo ""
-done
->>>>>>> UC5
