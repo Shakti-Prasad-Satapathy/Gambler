@@ -25,4 +25,3 @@ do
 	done
 done
 
-echo $win oooooooo $loose ooooooooo $stack
